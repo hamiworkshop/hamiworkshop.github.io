@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HAMI 2026: The 2026 International Workshop on Human-AI Interaction on Mobile Devices. Co-located with HAXD 2026 Conference.">
+    <meta name="keywords" content="HAMI 2026, Human-AI Interaction, Mobile Devices, HAXD 2026, Workshop, AI, Mobile Computing">
+    <meta name="author" content="HAMI 2026 Workshop">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HAMI 2026: The 2026 International Workshop on Human-AI Interaction on Mobile Devices | HAXD 2026</title>
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Google Fonts - Optimized with display=swap -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --accent-light: #60a5fa;
+            --accent-dark: #1e40af;
+            --text-dark: #0f172a;
+            --text-light: #475569;
+            --bg-light: #f8fafc;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #1e3a8a 100%);
+            --bg-gradient-alt: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #60a5fa 100%);
+            --border-color: #e2e8f0;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,0.16);
+            --shadow-xl: 0 16px 48px rgba(0,0,0,0.2);
+            --glow: 0 0 20px rgba(102, 126, 234, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            text-align: justify;
+            background: linear-gradient(to bottom, #ffffff 0%, #f8fafc 100%);
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container, section {
+            position: relative;
+            z-index: 1;
+        }
+
+        img, svg {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Text alignment overrides */
+        .text-center, .text-center *, .section-title, .workshop-intro, .workshop-intro-text {
+            text-align: center !important;
+        }
+
+        ul, ol, li, .topic-list li, .member-name, .member-affiliation, 
+        .date-label, .date-value, .submission-type, .submission-pages, .topic-title {
+            text-align: left;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--bg-gradient);
+            background-size: 200% 200%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>'),
+                radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 80%, rgba(255,255,255,0.08) 0%, transparent 50%);
+            opacity: 0.6;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.3; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.1);
+            letter-spacing: -0.5px;
+            animation: fadeInUp 1s ease-out;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-section .lead {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            font-weight: 300;
+            line-height: 1.8;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .badge-custom {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin: 0.5rem;
+            display: inline-block;
+        }
+
+        .acronym-highlight {
+            display: inline-block;
+            color: #ffffff !important;
+            background: none !important;
+            -webkit-background-clip: unset !important;
+            -webkit-text-fill-color: #ffffff !important;
+            background-clip: unset !important;
+            padding: 0;
+            border: none;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 6px;
+            margin: 1.5rem 0 2rem;
+            box-shadow: none;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255,255,255,0.3), 0 0 40px rgba(255,255,255,0.2);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.5));
+        }
+
+        .acronym-highlight:hover {
+            transform: scale(1.1);
+            letter-spacing: 8px;
+            text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255,255,255,0.5), 0 0 60px rgba(255,255,255,0.3);
+            filter: drop-shadow(0 0 15px rgba(255,255,255,0.7));
+        }
+
+
+        .acronym-highlight span.year {
+            font-size: 0.7em;
+            font-weight: 600;
+            letter-spacing: 1px;
+            opacity: 0.85;
+            margin-left: 0.5rem;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.85) !important;
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.95) !important;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem !important;
+            border-radius: 8px;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 80%;
+            height: 2px;
+            background: var(--bg-gradient);
+            transition: transform 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+            background: rgba(102, 126, 234, 0.1);
+        }
+
+        .nav-link:hover::before {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* Buttons */
+        .btn {
+            border-radius: 12px;
+            font-weight: 600;
+            padding: 0.75rem 1.25rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            box-shadow: var(--shadow-md);
+            width: auto;
+            min-width: auto;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: var(--bg-gradient);
+            color: white;
+            box-shadow: var(--shadow-md), 0 0 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg), 0 0 30px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-outline-primary {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+        }
+
+        .btn-outline-primary:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-lg {
+            padding: 0.75rem 1.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 576px) {
+            .btn {
+                padding: 0.65rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .btn-lg {
+                padding: 0.65rem 1.2rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-bottom: 3.5rem;
+            position: relative;
+            padding-bottom: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            border-radius: 4px;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+
+        .section-title.left::after {
+            left: 0;
+            transform: none;
+        }
+
+        /* Cards */
+        .card-custom {
+            border: none;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            overflow: hidden;
+            background: white;
+            position: relative;
+        }
+
+        .card-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--bg-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-xl), var(--glow);
+        }
+
+        .card-custom:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card-header-custom {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 1.5rem;
+            border: none;
+        }
+
+        .card-body-custom {
+            padding: 2rem;
+        }
+
+        /* Organizing Committee */
+        .committee-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .committee-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.05) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .committee-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .committee-card:hover::before {
+            opacity: 1;
+        }
+
+        .committee-title {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .committee-member {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+            border-radius: 12px;
+            border-left: 4px solid;
+            border-image: var(--bg-gradient) 1;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .committee-member::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.05), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .committee-member:hover {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            transform: translateX(8px);
+            box-shadow: var(--shadow-md);
+            border-left-width: 5px;
+        }
+
+        .committee-member:hover::after {
+            left: 100%;
+        }
+
+        .member-name {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .member-affiliation {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Topics Section */
+        .topic-item {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            border-left: 5px solid;
+            border-image: var(--bg-gradient) 1;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .topic-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .topic-item:hover {
+            border-left-width: 6px;
+            box-shadow: var(--shadow-xl), var(--glow);
+            transform: translateY(-6px) scale(1.01);
+        }
+
+        .topic-item:hover::after {
+            left: 100%;
+        }
+
+        .topic-title {
+            color: var(--primary-color);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .topic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .topic-list li {
+            padding: 0.6rem 0;
+            padding-left: 1.75rem;
+            position: relative;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .topic-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0.5rem;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Description Section */
+        .description-section {
+            background: var(--bg-light);
+        }
+
+        .workshop-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .workshop-intro-text {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            font-weight: 500;
+            line-height: 1.8;
+        }
+
+        .description-text {
+            font-size: 1.08rem;
+            color: var(--text-dark);
+            line-height: 1.9;
+            text-align: justify;
+        }
+
+        /* Paragraph justification */
+        p, .description-text p {
+            text-align: justify;
+        }
+
+        .description-text p {
+            margin-bottom: 2rem;
+        }
+
+        /* UI elements inherit alignment */
+        .navbar, .navbar *, .btn, .btn *, .nav-link, .nav-link *,
+        .badge-custom, .acronym-highlight, .hero-content, .hero-content * {
+            text-align: inherit;
+        }
+
+        .description-text p:first-child {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            font-weight: 400;
+            line-height: 1.95;
+        }
+
+        .workshop-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        .workshop-feature {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            padding: 2rem;
+            border-radius: 16px;
+            border-left: 5px solid;
+            border-image: var(--bg-gradient) 1;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .workshop-feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+            transition: transform 0.4s ease;
+        }
+
+        .workshop-feature:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+            border-left-width: 6px;
+        }
+
+        .workshop-feature:hover::before {
+            transform: translate(20%, -20%) scale(1.2);
+        }
+
+        .workshop-feature-icon {
+            font-size: 2.5rem;
+            background: var(--bg-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        .workshop-feature:hover .workshop-feature-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Date Cards */
+        .date-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .date-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--bg-gradient);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .date-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl), var(--glow);
+        }
+
+        .date-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Submission Cards */
+        .submission-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submission-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(102, 126, 234, 0.08) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .submission-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(102, 126, 234, 0.3);
+        }
+
+        .submission-card:hover::after {
+            opacity: 1;
+        }
+
+        .workshop-feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .workshop-feature-text {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            background-size: 200% 200%;
+            animation: gradientShift 20s ease infinite;
+            color: white;
+            padding: 3rem 0 2rem;
+            margin-top: 0;
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .footer .container {
+            text-align: left;
+        }
+
+        .footer-section {
+            margin-bottom: 2rem;
+        }
+
+        .footer h5 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .footer h5:first-child {
+            margin-top: 0;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        .footer hr {
+            border-color: rgba(255, 255, 255, 0.2);
+            margin: 2rem 0 1rem;
+            opacity: 1;
+        }
+
+        .footer-copyright {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Footer Table */
+        .footer-table {
+            width: 100%;
+            border-collapse: collapse;
+            display: table;
+        }
+
+        .footer-table tbody {
+            display: table-row-group;
+        }
+
+        .footer-table tr {
+            display: table-row;
+        }
+
+        .footer-table td {
+            display: table-cell;
+            padding: 1rem;
+            vertical-align: top;
+            border: none;
+            width: 33.333%;
+        }
+
+        .footer-table td:first-child {
+            text-align: left;
+        }
+
+        .footer-table td:nth-child(2) {
+            text-align: center;
+        }
+
+        .footer-table td:last-child {
+            text-align: right;
+        }
+
+        .footer-table-cell {
+            padding: 1rem;
+        }
+
+        .footer-left {
+            text-align: left;
+        }
+
+        .footer-center {
+            text-align: center;
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .footer-center ul {
+            display: inline-block;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        .footer-right ul {
+            display: inline-block;
+            text-align: right;
+            margin-left: auto;
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 2rem 0 1.5rem;
+            }
+
+            .footer h5 {
+                font-size: 1rem;
+                margin-top: 1.5rem;
+            }
+
+            .footer h5:first-child {
+                margin-top: 0;
+            }
+
+            .footer-section {
+                margin-bottom: 1.5rem;
+            }
+
+            .footer-table {
+                display: block;
+            }
+
+            .footer-table tbody {
+                display: block;
+            }
+
+            .footer-table tr {
+                display: block;
+                margin-bottom: 2rem;
+            }
+
+            .footer-table td {
+                display: block;
+                width: 100%;
+                padding: 0;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .footer-table td {
+                width: 33.333%;
+            }
+        }
+
+        .footer h5 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: white;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Responsive - Mobile First Approach */
+        /* Container responsive padding */
+        @media (max-width: 576px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .hero-section {
+                padding: 60px 0 40px;
+            }
+
+            .hero-section h1 {
+                font-size: 1.5rem;
+                line-height: 1.3;
+            }
+
+            .hero-section .lead {
+                font-size: 0.95rem;
+                padding: 0 1rem;
+            }
+
+            .acronym-highlight {
+                font-size: 1.3rem;
+                letter-spacing: 2px;
+                margin: 1rem 0;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+                margin-bottom: 2rem;
+            }
+
+            .btn-lg {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.9rem;
+            }
+
+            .description-text {
+                font-size: 1rem;
+                text-align: justify;
+            }
+
+            .workshop-features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .workshop-feature {
+                padding: 1.25rem;
+            }
+
+            .committee-card {
+                padding: 1.5rem;
+            }
+
+            .date-card {
+                padding: 1.5rem;
+            }
+
+            .submission-card {
+                padding: 1.5rem;
+            }
+
+            .submission-type {
+                font-size: 1.2rem;
+            }
+
+            .submission-pages {
+                font-size: 0.9rem;
+                padding: 0.4rem 1.2rem;
+            }
+
+            .submission-description {
+                font-size: 0.9rem;
+            }
+
+            .date-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .date-value {
+                font-size: 1.1rem;
+            }
+
+            .topic-item {
+                padding: 1.25rem;
+            }
+
+            .highlight-box {
+                padding: 1.25rem;
+            }
+
+            .navbar-brand {
+                font-size: 0.9rem;
+            }
+
+            .navbar-brand span {
+                font-size: 0.75rem !important;
+            }
+
+            .nav-link {
+                padding: 0.5rem 0.75rem !important;
+                font-size: 0.9rem;
+            }
+
+            .navbar-collapse {
+                margin-top: 1rem;
+                padding-top: 1rem;
+                border-top: 1px solid rgba(0,0,0,0.1);
+            }
+
+            /* Ensure proper text wrapping */
+            p, .description-text, .workshop-feature-text {
+                word-wrap: break-word;
+                hyphens: auto;
+            }
+
+            /* Scroll to top button mobile */
+            .scroll-top {
+                width: 42px;
+                height: 42px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .hero-section .lead {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .section {
+                padding: 50px 0;
+            }
+
+            .acronym-highlight {
+                font-size: 1.6rem;
+                padding: 0;
+                letter-spacing: 3px;
+                margin: 1rem 0 1.5rem;
+            }
+
+            .acronym-highlight span.year {
+                font-size: 0.65em;
+            }
+
+            .navbar-brand span {
+                font-size: 0.85rem !important;
+            }
+
+            .workshop-features {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .workshop-intro-text {
+                font-size: 1rem;
+            }
+
+            .description-text p:first-child {
+                font-size: 1.05rem;
+            }
+
+            .highlight-box {
+                padding: 1.5rem;
+            }
+
+            .submission-info-box {
+                padding: 1.25rem;
+            }
+
+            .submission-info-box h4 {
+                font-size: 1rem;
+            }
+
+            .committee-title {
+                font-size: 1.1rem;
+            }
+
+            .topic-title {
+                font-size: 1rem;
+            }
+
+            /* Stack buttons on mobile */
+            .hero-section .btn {
+                display: block;
+                width: 100%;
+                margin: 0.5rem 0;
+            }
+
+            .hero-section .btn.me-2 {
+                margin-right: 0 !important;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 992px) {
+            .section {
+                padding: 70px 0;
+            }
+
+            .workshop-features {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 993px) {
+            .workshop-features {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 56px;
+            height: 56px;
+            background: var(--bg-gradient);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg), var(--glow);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            font-size: 1.2rem;
+        }
+
+        .scroll-top::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 50%;
+            background: var(--bg-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+            filter: blur(10px);
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-8px) scale(1.1);
+            box-shadow: var(--shadow-xl), 0 0 40px rgba(102, 126, 234, 0.6);
+        }
+
+        .scroll-top:hover::before {
+            opacity: 0.7;
+        }
+
+        .scroll-top.show {
+            display: flex;
+        }
+
+        /* Highlight box */
+        .highlight-box {
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-left: 6px solid;
+            border-image: var(--bg-gradient) 1;
+            padding: 2.5rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: var(--bg-gradient);
+            background: linear-gradient(180deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 8px 0 0 8px;
+        }
+
+        /* Important Dates Section */
+        .dates-section {
+            background: white;
+        }
+
+        .date-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .date-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .date-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .date-label {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.8rem;
+        }
+
+        .date-value {
+            color: var(--text-dark);
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Submission Guidelines Section */
+        .submission-section {
+            background: var(--bg-light);
+        }
+
+        .submission-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            position: relative;
+        }
+
+        .submission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border-color: var(--primary-color);
+        }
+
+        .submission-type {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .submission-pages {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .submission-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            text-align: left;
+        }
+
+        .submission-info-box {
+            background: #f1f5f9;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            border-radius: 6px;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .submission-info-box h4 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .submission-info-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .submission-info-box li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .submission-info-box li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home" style="color: var(--primary-color) !important;">
+                <i class="bi bi-phone"></i> <span style="font-weight: 700; letter-spacing: 2px; font-size: 1.1rem;">HAMI</span><span style="font-weight: 600; letter-spacing: 1px; opacity: 0.85;">2026</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#workshop">Workshop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dates">Important Dates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#submission">Submission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#topics">Topics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#organizers">Committee</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center">
+                <div class="acronym-highlight fade-in-up">HAMI<span class="year">2026</span></div>
+                <h1 class="fade-in-up">The 2026 International Workshop: Human-AI Interaction on Mobile Devices</h1>
+                <p class="lead fade-in-up">
+                    Co-located with HAXD 2026 Conference<br>
+                    The International Conference on Human-AI Interaction and Experience Design
+                </p>
+                <div class="mt-4 fade-in-up d-flex flex-column flex-sm-row gap-2 justify-content-center align-items-center">
+                    <a href="#workshop" class="btn btn-light btn-lg">
+                        <i class="bi bi-info-circle"></i> About the Workshop
+                    </a>
+                    <a href="#topics" class="btn btn-outline-light btn-lg">
+                        <i class="bi bi-file-earmark-text"></i> Call for Papers
+                    </a>
+                    <a href="#submission" class="btn btn-light btn-lg" style="background: rgba(255, 255, 255, 0.95); color: var(--primary-color); font-weight: 600;">
+                        <i class="bi bi-upload"></i> Submit Your Paper
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Description Section -->
+    <section id="workshop" class="section description-section">
+        <div class="container">
+            <h2 class="section-title text-center">About HAMI 2026</h2>
+            <div class="workshop-intro">
+                <p class="workshop-intro-text fs-5 fs-md-4">
+                    <strong style="color: var(--primary-color); letter-spacing: 1px;">HAMI 2026</strong> – The 2026 International Workshop on Human-AI Interaction on Mobile Devices
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="description-text">
+                        <p>
+                            Mobile devices have become the most pervasive and intimate interface for human–AI interaction. From intelligent assistants and copilots to emotionally aware conversational agents, AI systems increasingly collaborate with users in highly contextual, time-critical, and resource-constrained mobile settings. These interactions foreground fundamental Human–AI Interaction (HAI) concerns, including how agency and control are shared between humans and AI, how AI systems communicate intent, confidence, and uncertainty through mobile interfaces, and how context, situation, and embodiment influence usability, trust, and overall user experience.
+                        </p>
+
+                        <div class="highlight-box">
+                            <p class="mb-0" style="font-size: 1.05rem; line-height: 1.85;">
+                                <strong>The 2026 International Workshop</strong>, co-located with <strong>HAXD 2026 Conference – The International Conference on Human-AI Interaction and Experience Design</strong>, aims to bring together researchers and practitioners who place human–AI interaction at the center of mobile AI system design. The workshop emphasizes interaction paradigms, human factors, adaptive behavior, and experience design, rather than AI algorithms alone.
+                            </p>
+                        </div>
+
+                        <div class="workshop-features">
+                            <div class="workshop-feature">
+                                <div class="workshop-feature-icon">
+                                    <i class="bi bi-people"></i>
+                                </div>
+                                <div class="workshop-feature-title">Interdisciplinary Focus</div>
+                                <div class="workshop-feature-text">
+                                    We encourage perspectives spanning HCI, AI, UX design, psychology, visualization, and applied domains to foster comprehensive understanding of mobile human-AI interaction.
+                                </div>
+                            </div>
+                            <div class="workshop-feature">
+                                <div class="workshop-feature-icon">
+                                    <i class="bi bi-lightbulb"></i>
+                                </div>
+                                <div class="workshop-feature-title">Real-World Context</div>
+                                <div class="workshop-feature-text">
+                                    We seek contributions that investigate how humans interact with AI systems on mobile devices in real-world, situated contexts, addressing practical challenges and opportunities.
+                                </div>
+                            </div>
+                            <div class="workshop-feature">
+                                <div class="workshop-feature-icon">
+                                    <i class="bi bi-diagram-3"></i>
+                                </div>
+                                <div class="workshop-feature-title">Design-Centered Approach</div>
+                                <div class="workshop-feature-text">
+                                    Our goal is to foster focused discussion on design principles, interaction models, evaluation methods, and emerging challenges for mobile human-AI interaction.
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>
+                            We seek contributions that investigate how humans perceive, collaborate with, supervise, and are supported by AI systems on mobile devices, especially in real-world, situated contexts. The workshop encourages interdisciplinary perspectives spanning HCI, AI, UX design, psychology, visualization, and applied domains.
+                        </p>
+                        <p>
+                            <strong>Our goal</strong> is to foster a focused discussion on design principles, interaction models, evaluation methods, and emerging challenges for mobile human-AI interaction, bridging theory, empirical studies, and practical systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Important Dates Section -->
+    <section id="dates" class="section dates-section">
+        <div class="container">
+            <h2 class="section-title text-center">Important Dates</h2>
+            <div class="row g-3 g-md-4">
+                <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <div class="date-label">Submission Deadline</div>
+                        <div class="date-value">28 April 2026</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="bi bi-bell"></i>
+                        </div>
+                        <div class="date-label">Acceptance Notification</div>
+                        <div class="date-value">5 May 2026</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 mb-3 mb-lg-0">
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="bi bi-file-earmark-check"></i>
+                        </div>
+                        <div class="date-label">Camera-Ready & Registration</div>
+                        <div class="date-value">15 May 2026</div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="date-card">
+                        <div class="date-icon">
+                            <i class="bi bi-calendar-event"></i>
+                        </div>
+                        <div class="date-label">Workshop Dates</div>
+                        <div class="date-value">9-12 June 2026</div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4 mt-md-5">
+                <a href="#submission" class="btn btn-primary btn-lg px-4 px-md-5 py-2 py-md-3 w-100 w-md-auto d-inline-block" style="font-size: 1rem; font-weight: 600; border-radius: 8px; box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(30, 58, 138, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(30, 58, 138, 0.3)'">
+                    <i class="bi bi-upload me-2"></i> Submit Your Paper
+                </a>
+                <p class="mt-3 text-muted small">
+                    Submission Deadline: <strong>28 April 2026</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Submission Guidelines Section -->
+    <section id="submission" class="section submission-section">
+        <div class="container">
+            <h2 class="section-title text-center">Submission Guidelines</h2>
+            <p class="text-center text-muted mb-4 mb-md-5 fs-6 fs-md-5">
+                Choose the format that best fits your work
+            </p>
+            
+            <div class="submission-info-box">
+                <h4><i class="bi bi-info-circle me-2"></i>Important Information</h4>
+                <p class="mb-3"><strong>Accepted workshop papers will appear in the main conference IEEE proceedings</strong></p>
+                <ul>
+                    <li><strong>Format Requirements:</strong> All submissions must follow the <strong>HAXD 2026 submission guidelines</strong> and use the conference template. Please consult the main conference website for detailed formatting instructions. Remember to <strong>add keywords</strong> to your submission.</li>
+                    <li><strong>Submission Portal:</strong> Workshop papers must be submitted through the <strong>HAXD 2026 sparcly system</strong>. Make sure to select the appropriate workshop track during submission.</li>
+                </ul>
+            </div>
+
+            <div class="row g-4 mt-4">
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <div class="submission-card">
+                        <div class="submission-type">Long Papers</div>
+                        <div class="submission-pages">7–8 Pages</div>
+                        <div class="submission-description">
+                            Mature research contributions with substantial original work, complete evaluations, and clear contributions to the field.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <div class="submission-card">
+                        <div class="submission-type">Short / Position Papers</div>
+                        <div class="submission-pages">4–6 Pages</div>
+                        <div class="submission-description">
+                            Work-in-progress, preliminary results, vision papers, or position statements on emerging challenges and opportunities.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="submission-card">
+                        <div class="submission-type">Poster Papers</div>
+                        <div class="submission-pages">1–2 Pages</div>
+                        <div class="submission-description">
+                            Undergraduate student contributions, early-stage ideas, prototypes, or course/research projects. Great for getting started!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics of Interest Section -->
+    <section id="topics" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Topics of Interest</h2>
+            <p class="text-center text-muted mb-4 mb-md-5 fs-6 fs-md-5 px-2 px-md-0">
+                Submissions should clearly foreground human–AI interaction on mobile or other similar handheld devices. Topics include, but are not limited to:
+            </p>
+            
+            <div class="row g-3 g-lg-4">
+                <div class="col-12 col-lg-6">
+                    <div class="topic-item">
+                        <div class="topic-title">
+                            <i class="bi bi-phone"></i> Human–AI Interaction Design on Mobile
+                        </div>
+                        <ul class="topic-list">
+                            <li>Interaction models for human–AI collaboration on mobile devices</li>
+                            <li>Mixed-initiative interaction and shared control between users and AI</li>
+                            <li>Explainable, transparent, and trustworthy AI interactions on mobile</li>
+                            <li>Designing AI feedback, confidence, and uncertainty for small screens</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-item">
+                        <div class="topic-title">
+                            <i class="bi bi-robot"></i> Intelligent Assistance & Copilots
+                        </div>
+                        <ul class="topic-list">
+                            <li>Mobile copilots for task support, creativity, and decision-making</li>
+                            <li>Human-centered design of AI-assisted coding, authoring, and planning tools</li>
+                            <li>Automation vs. user control in mobile AI systems</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-item">
+                        <div class="topic-title">
+                            <i class="bi bi-geo-alt"></i> Context-Aware & Situated Interaction
+                        </div>
+                        <ul class="topic-list">
+                            <li>Human-AI interaction informed by situational awareness and context sensing</li>
+                            <li>Scene understanding, environment perception, and interaction adaptation</li>
+                            <li>Mobile AI systems that respond to movement, attention, and environment</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-item">
+                        <div class="topic-title">
+                            <i class="bi bi-chat-dots"></i> Conversational & Emotional Interaction
+                        </div>
+                        <ul class="topic-list">
+                            <li>Conversational agents and multimodal dialogue on mobile devices</li>
+                            <li>Emotional AI, affect modeling, and empathetic interaction design</li>
+                            <li>Human perception of personality, social presence, and agency in mobile AI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="topic-item">
+                        <div class="topic-title">
+                            <i class="bi bi-vr"></i> Immersive & Visual Interaction
+                        </div>
+                        <ul class="topic-list">
+                            <li>Human-AI interaction in mobile AR/VR/XR experiences</li>
+                            <li>Visualization and graphics for AI interpretation and user understanding</li>
+                            <li>Spatial and embodied interaction with AI through mobile devices</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-item">
+                        <div class="topic-title">
+                            <i class="bi bi-clipboard-check"></i> Human Factors & Evaluation
+                        </div>
+                        <ul class="topic-list">
+                            <li>Cognitive load, attention, trust, and usability in mobile AI interaction</li>
+                            <li>User studies, longitudinal deployments, and in-the-wild evaluations</li>
+                            <li>Accessibility, inclusion, and ethical issues in mobile human-AI interaction</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-item">
+                        <div class="topic-title">
+                            <i class="bi bi-app-indicator"></i> Application-Driven HAI Studies
+                        </div>
+                        <ul class="topic-list">
+                            <li>Human-AI interaction in mobile healthcare, education, agriculture, and governance</li>
+                            <li>Domain-specific interaction challenges and lessons learned</li>
+                        </ul>
+                    </div>
+
+                    <div class="topic-item">
+                        <div class="topic-title">
+                            <i class="bi bi-leaf"></i> Sustainable & Responsible Interaction
+                        </div>
+                        <ul class="topic-list">
+                            <li>Human-centered interaction perspectives on green and energy-aware mobile AI</li>
+                            <li>Balancing interaction quality with performance and resource constraints</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizing Committee Section -->
+    <section id="organizers" class="section">
+        <div class="container">
+            <h2 class="section-title text-center">Organizing Committee</h2>
+            <div class="row g-3 g-lg-4">
+                <div class="col-12 col-lg-6 mb-3 mb-lg-0">
+                    <div class="committee-card">
+                        <div class="committee-title">
+                            <i class="bi bi-person-badge"></i> General Chairs
+                        </div>
+                        <div class="committee-member">
+                            <div class="member-name">Dr. Prashant Goswami</div>
+                            <div class="member-affiliation">BTH Sweden</div>
+                        </div>
+                        <div class="committee-member">
+                            <div class="member-name">Samit Bhattacharya</div>
+                            <div class="member-affiliation">IIT Guwahati</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="committee-card">
+                        <div class="committee-title">
+                            <i class="bi bi-people"></i> PC Chairs
+                        </div>
+                        <div class="committee-member">
+                            <div class="member-name">Jaya Sreevalsan Nair</div>
+                            <div class="member-affiliation">IIIT Bangalore</div>
+                        </div>
+                        <div class="committee-member">
+                            <div class="member-name">Raghavendra GS</div>
+                            <div class="member-affiliation">IIIT Hyderabad</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <table class="footer-table">
+                <tbody>
+                    <tr>
+                        <!-- Workshop Information - Left -->
+                        <td class="footer-table-cell footer-section footer-left">
+                            <h5><i class="bi bi-info-circle me-2"></i>Workshop Information</h5>
+                            <p>
+                                <strong>HAMI 2026</strong><br>
+                                The 2026 International Workshop on Human-AI Interaction on Mobile Devices
+                            </p>
+                            <p>
+                                Co-located with <strong>HAXD 2026 Conference</strong><br>
+                                The International Conference on Human-AI Interaction and Experience Design
+                            </p>
+                        </td>
+
+                        <!-- Quick Links - Center -->
+                        <td class="footer-table-cell footer-section footer-center">
+                            <h5><i class="bi bi-link-45deg me-2"></i>Quick Links</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><a href="#home"><i class="bi bi-arrow-up-circle me-2"></i>Back to Top</a></li>
+                                <li class="mb-2"><a href="#workshop"><i class="bi bi-info-circle me-2"></i>Workshop Details</a></li>
+                                <li class="mb-2"><a href="#dates"><i class="bi bi-calendar-event me-2"></i>Important Dates</a></li>
+                                <li class="mb-2"><a href="#submission"><i class="bi bi-file-earmark-text me-2"></i>Submission Guidelines</a></li>
+                                <li class="mb-2"><a href="#topics"><i class="bi bi-list-ul me-2"></i>Topics of Interest</a></li>
+                                <li class="mb-2"><a href="#organizers"><i class="bi bi-people me-2"></i>Organizing Committee</a></li>
+                            </ul>
+                        </td>
+
+                        <!-- Important Dates - Right -->
+                        <td class="footer-table-cell footer-section footer-right">
+                            <h5><i class="bi bi-calendar-check me-2"></i>Important Dates</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><strong>Submission:</strong> 28 April 2026</li>
+                                <li class="mb-2"><strong>Notification:</strong> 5 May 2026</li>
+                                <li class="mb-2"><strong>Camera-Ready:</strong> 15 May 2026</li>
+                                <li class="mb-2"><strong>Workshop:</strong> 9-12 June 2026</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Copyright Section -->
+            <hr>
+            <table class="footer-table">
+                <tbody>
+                    <tr>
+                        <td class="footer-table-cell text-center" colspan="3">
+                            <div class="footer-copyright">
+                                <p class="mb-0">&copy; 2026 HAMI Workshop. All rights reserved.</p>
+                                <p class="mb-0 mt-2 small">Part of HAXD 2026 Conference</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script defer>
+        // DOM caching
+        const navbar = document.querySelector('.navbar');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        const scrollTopBtn = document.getElementById('scrollTop');
+        const animatedElements = document.querySelectorAll('.topic-item, .committee-card, .date-card, .submission-card, .workshop-feature');
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Close mobile menu if open
+                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
+                }
+            });
+        });
+
+        // Optimized scroll handler with throttling
+        let ticking = false;
+        window.addEventListener('scroll', function() {
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const scrollY = window.scrollY;
+                    
+                    // Navbar scroll effect
+                    if (navbar) {
+                        navbar.classList.toggle('scrolled', scrollY > 50);
+                    }
+                    
+                    // Show/hide scroll to top button
+                    if (scrollTopBtn) {
+                        scrollTopBtn.classList.toggle('show', scrollY > 300);
+                    }
+                    
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Intersection Observer for fade-in animations
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            // Observe animated elements
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        } else {
+            // Fallback for browsers without IntersectionObserver
+            animatedElements.forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }
+    </script>
+</body>
+</html>
